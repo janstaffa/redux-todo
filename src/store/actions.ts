@@ -1,8 +1,9 @@
-import { ADD_TODO, TOGGLE_TODO, SET_FILTER } from "./actionTypes";
+import { Action } from "../interfaces";
+import { ADD_TODO, TOGGLE_TODO } from "./actionTypes";
 
 let nextTodoId = 0;
 
-const addTodo = (content: string) => ({
+const addTodo = (content: string): Action => ({
     type: ADD_TODO,
     payload: {
         id: ++nextTodoId,

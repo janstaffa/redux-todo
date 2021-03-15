@@ -1,11 +1,17 @@
 import React from 'react';
-import './App.css';
-// import { Provider } from 'react-redux'
+import { Provider } from 'react-redux'
+import store from './store/store';
+import TodoList from './components/TodoList';
+import AddTodo from './components/AddTodo';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <TodoList />
+        <AddTodo />
+      </div>
+    </Provider>
   );
 }
 

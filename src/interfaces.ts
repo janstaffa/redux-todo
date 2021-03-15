@@ -4,18 +4,19 @@ interface Todo {
     comleted: boolean;
 }
 
-type Todos = Array<Todo>;
+type Todos = Todo[];
 
 interface State {
     todos: Todos
 }
 
 interface Action {
+    type: string;
+
     payload: {
         id: number,
         content: string
     };
-    type: string;
 }
 
 
