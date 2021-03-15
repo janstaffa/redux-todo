@@ -1,7 +1,7 @@
 interface Todo {
     id: number;
     content: string;
-    comleted: boolean;
+    completed: boolean;
 }
 
 type Todos = Todo[];
@@ -19,7 +19,10 @@ interface Action {
     };
 }
 
-
+interface Toggle {
+    type: string;
+    payload: { id: number };
+}
 
 
 
@@ -27,5 +30,6 @@ export type {
     Todo,
     Todos,
     State,
-    Action
+    Action,
+    Toggle
 }
